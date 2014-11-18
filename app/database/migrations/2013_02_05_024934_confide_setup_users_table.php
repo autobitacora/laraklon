@@ -18,7 +18,7 @@ class ConfideSetupUsersTable extends Migration {
             $table->string('username');
             $table->string('email');
             $table->integer('legajo');
-            $table->integer(imite)->default('5');
+            $table->integer('limite')->default('5');
             $table->string('password')->default('12345');
             $table->string('confirmation_code');
             $table->string('remember_token')->nullable();
