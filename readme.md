@@ -83,7 +83,7 @@ This will skip the development packages and ensure the version of the packages i
 
 NEVER run `php composer.phar update` on your production server.
 
-### Step 3: Configure Environments
+### Step 3: Configure Environments y clave secreta
 
 Open ***bootstrap/start.php*** and edit the following lines to match your settings. You want to be using your machine name in Windows and your hostname in OS X and Linux (type `hostname` in terminal). Using the machine name will allow the `php artisan` command to use the right configuration files as well.
 
@@ -122,6 +122,16 @@ return array(
 
 );
 ```
+
+
+Para modificar la clave secreta automaticamente ejecutar:
+
+```bash
+$ php artisan key:generate --env=local
+```
+
+Esto es asi porque tenemos environments...
+
 
 ### Step 4: Configure Database
 

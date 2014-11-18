@@ -16,7 +16,7 @@ class EntrustSetupTables extends Migration {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
 
         // Creates the assigned_roles (Many-to-Many relation) table

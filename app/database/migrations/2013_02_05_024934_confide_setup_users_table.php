@@ -17,11 +17,13 @@ class ConfideSetupUsersTable extends Migration {
             $table->increments('id');
             $table->string('username');
             $table->string('email');
-            $table->string('password');
+            $table->integer('legajo');
+            $table->integer(imite)->default('5');
+            $table->string('password')->default('12345');
             $table->string('confirmation_code');
             $table->string('remember_token')->nullable();
             $table->boolean('confirmed')->default(false);
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
 
 
@@ -31,7 +33,7 @@ class ConfideSetupUsersTable extends Migration {
             $table->engine = 'InnoDB';
             $table->string('email');
             $table->string('token');
-            $table->timestamp('created_at');
+            $table->nullableTimestamp('created_at');
         });
     }
 
