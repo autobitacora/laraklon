@@ -1,8 +1,8 @@
 <?php
 
-use Woodling\Woodling;
-use J20\Uuid;
 use Carbon\Carbon;
+use J20\Uuid;
+use Woodling\Woodling;
 
 Woodling::seed('UserAdmin', array('class' => 'User', 'do' => function($blueprint)
 {

@@ -33,7 +33,7 @@ class ConfideSetupUsersTable extends Migration {
             $table->engine = 'InnoDB';
             $table->string('email');
             $table->string('token');
-            $table->nullableTimestamp('created_at');
+            $table->nullableTimestamps('created_at');
         });
     }
 

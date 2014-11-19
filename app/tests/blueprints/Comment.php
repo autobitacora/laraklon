@@ -1,7 +1,7 @@
 <?php
 
-use Woodling\Woodling;
 use Carbon\Carbon;
+use Woodling\Woodling;
 
 
 Woodling::seed('Comment', array('class' => 'Comment', 'do' => function($blueprint)
